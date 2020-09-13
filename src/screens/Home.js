@@ -11,23 +11,19 @@ import Moment from 'moment'
 import DocumentPick from '../components/DocumentPick';
 import Employees from '../utils/EmployeeData'
 import Faces from '../components/FacePile/Faces';
+import { InitialState } from '../utils/InitialState';
 
 var employeeList = []
 export default class Home extends React.Component{
     constructor(props){
         super(props)
-        this.state = {
-            Title: '',
-            selectedDate: '',
-            dialogVisible: false,
-            desc : '',
-            employeeList: '',
-            isAttachment: false,
-            docName: '',
-            allEmployees: Employees
-        }
-        this.baseState = this.state
+        this.state = InitialState        
         this.state.allEmployees.forEach(item => Image.prefetch(item.poster));
+    }
+
+    componentDidMount(){
+        console.log("Home Mounted")
+        this.state = InitialState
     }
 
     showDialog = () => {

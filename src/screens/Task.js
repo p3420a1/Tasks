@@ -10,6 +10,7 @@ import { SafeAreaView } from 'react-navigation'
 import Moment from 'moment'
 import { CommonActions } from '@react-navigation/native';
 import Employees from '../utils/EmployeeData'
+import InitialState from '../utils/InitialState'
 
 export default class Task extends React.Component{
     constructor(props){
@@ -24,7 +25,7 @@ export default class Task extends React.Component{
       } 
 
       onClose(){
-          this.props.navigation.navigate('Home')
+          this.props.navigation.navigate('Home', {state: InitialState})
       }
     
     render(){
