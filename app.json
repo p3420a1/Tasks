@@ -1,12 +1,4 @@
 {
   "name": "Tasks",
-  "displayName": "Tasks",
-  "expo": {
-    "name": "Tasks",
-    "slug": "Tasks",
-    "version": "1.0.0",
-    "assetBundlePatterns": [
-      "**/*"
-    ]
-  }
+  "displayName": "Tasks" 
 }
